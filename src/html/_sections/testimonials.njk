@@ -1,0 +1,41 @@
+<section class="section testimonials" id="events">
+    <div class="container">
+        <div class="section-header testimonials__section-header">
+            <p class="section-header__subtitle">Cowork in Words</p>
+            <h2 class="section-header__title">Hear It from Our Clients</h2>
+        </div>
+        <div class="testimonials__slider" data-testimonials-slider>
+            <div class="testimonials__buttons" data-testimonials-buttons hidden>
+                <button class="button button--icon" type="button" data-testimonials-prev
+                    aria-label="Previous testimonial">
+                    <svg class="button__icon" viewBox="0 0 24 20" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#arrow-left" />
+                    </svg>
+                </button>
+
+                <button class="button button--icon" type="button" data-testimonials-next aria-label="Next testimonial">
+                    <svg class="button__icon" viewBox="0 0 24 20" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#arrow-right" />
+                    </svg>
+                </button>
+            </div>
+
+            <ul class="testimonials__list" data-testimonials-list>
+                {% for item in testimonials %}
+                <li class="testimonials__item">
+                    <figure class="testimonial testimonial--{{ item.color }}">
+                        <img class="testimonial__avatar" src="/uploads/images/{{ item.avatar.1x }}"
+                            srcset="/uploads/images/{{ item.avatar.1x }} 1x, /uploads/images/{{ item.avatar.2x }} 2x"
+                            width="56" height="56" loading="lazy" alt="">
+                        <blockquote class="testimonial__quote">&ldquo;{{ item.quote }}&rdquo;</blockquote>
+                        <figcaption class="testimonial__author">
+                            <span class="testimonial__name">{{ item.name }}</span>
+                            <span class="testimonial__position">{{ item.position }}</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

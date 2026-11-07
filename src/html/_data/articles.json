@@ -1,0 +1,32 @@
+[
+  {
+    "image": {
+      "x1": "article-1.webp",
+      "x2": "article-1@2x.webp"
+    },
+    "tagColor": "sky-blue",
+    "tag": "Trending",
+    "time": "7 min",
+    "title": "Navigating the Future: Trends in Modern Coworking Spaces"
+  },
+  {
+    "image": {
+      "x1": "article-2.webp",
+      "x2": "article-2@2x.webp"
+    },
+    "tagColor": "pink",
+    "tag": "Productivity",
+    "time": "5 min",
+    "title": "Mastering Productivity: Tips from Cowork's High Achievers"
+  },
+  {
+    "image": {
+      "x1": "article-3.webp",
+      "x2": "article-3@2x.webp"
+    },
+    "tagColor": "lime",
+    "tag": "Talk",
+    "time": "10 min",
+    "title": "Tech Talk: The Backbone of Cowork's Seamless Experience"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "name": "cowork-landing",
+  "version": "1.0.0",
+  "description": "Responsive coworking landing page built with Nunjucks, Sass and vanilla JS",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "start": "npm run dev",
+    "build": "gulp --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsmartok/htmlcss-coworking-space-company.git"
+  },
+  "keywords": [],
+  "author": "Sergii Skorobagatko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsmartok/htmlcss-coworking-space-company/issues"
+  },
+  "homepage": "https://github.com/vsmartok/htmlcss-coworking-space-company#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "browser-sync": "^3.0.4",
+    "browserslist": "^4.29.3",
+    "browserslist-to-esbuild": "^2.1.1",
+    "cssnano": "^9.3.2",
+    "del": "^8.0.1",
+    "esbuild": "^0.28.2",
+    "fontverter": "^2.0.0",
+    "gulp": "^5.0.1",
+    "gulp-beautify": "^3.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-svg-sprite": "^2.0.3",
+    "postcss": "^8.5.29",
+    "sass": "^1.105.1",
+    "sharp": "^0.35.5",
+    "svgo": "^4.1.0"
+  }
+}

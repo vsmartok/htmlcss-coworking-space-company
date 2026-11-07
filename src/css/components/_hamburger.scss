@@ -1,0 +1,65 @@
+@use "../abstracts/variables";
+
+.hamburger {
+  display: inline-block;
+  width: variables.$hamburger-width;
+  height: variables.$hamburger-height;
+  padding-inline: variables.$hamburger-padding-x;
+
+  background-color: var(--color-dark);
+
+  text-align: center;
+  vertical-align: middle;
+
+  border-radius: variables.$hamburger-border-radius;
+  border: none;
+
+  appearance: none;
+  cursor: pointer;
+
+  &__icon {
+    position: relative;
+    transition: border-color var(--transition-duration) ease;
+
+    &,
+    &::before,
+    &::after {
+      display: block;
+      width: 100%;
+      border-bottom: 2px solid var(--color-white);
+      border-radius: 999px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: transform var(--transition-duration) ease;
+    }
+
+    &::before {
+      top: -7px;
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .hamburger__icon {
+      border-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<section class="section section--sm social-proof">
+    <div class="container">
+        <div class="section-header section-header--small">
+            <p class="section-header__subtitle">Trusted by Leading Companies</p>
+        </div>
+    </div>
+
+    {% set copies = 3 %}
+    <div class="social-proof__marquee">
+        <div class="social-proof__track" style="--marquee-copies: {{ copies }}">
+            {% for copy in range(copies) %}
+            <ul class="social-proof__list" {% if copy > 0 %}aria-hidden="true" {% endif %}>
+                {% for logo in partners %}
+                <li class="social-proof__item">
+                    <svg class="social-proof__logo" width="{{ logo.width }}" height="{{ logo.height }}"
+                        viewBox="0 0 {{ logo.width }} {{ logo.height }}" role="img" aria-label="{{ logo.name }}">
+                        <use href="/assets/icons/sprite.svg#{{ logo.id }}" />
+                    </svg>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+</section>

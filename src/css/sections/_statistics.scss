@@ -1,0 +1,114 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables";
+
+.statistics {
+  &__section-header {
+    --section-header-margin-end: 2rem;
+
+    @include mq-up(desktop) {
+      --section-header-text-align: left;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    gap: 2.5rem 5rem;
+
+    @include mq-up(desktop) {
+      align-items: center;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 2rem;
+    justify-items: center;
+
+    @include mq-up(desktop) {
+      gap: 2.5rem 1.5rem;
+      justify-items: start;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    &--lime {
+      --statistics-circle-color: var(--color-lime);
+      --statistics-circle-top: 0.65em;
+    }
+
+    &--sky-blue {
+      --statistics-circle-color: var(--color-sky-blue);
+    }
+
+    &--pink {
+      --statistics-circle-color: var(--color-pink);
+    }
+
+    &--peach {
+      --statistics-circle-color: var(--color-peach);
+      --statistics-circle-left: 1.1em;
+    }
+
+    @include mq-up(desktop) {
+      text-align: start;
+    }
+  }
+
+  &__number {
+    position: relative;
+    display: block;
+    font-family: variables.$headings-font-family;
+    font-size: 2.625rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    z-index: 1;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: var(--statistics-circle-top, 0.45em);
+      left: var(--statistics-circle-left, 0.68em);
+
+      width: 0.75em;
+      height: 0.75em;
+      background-color: var(--statistics-circle-color, transparent);
+      border-radius: 50%;
+
+      z-index: -1;
+    }
+
+    @include mq-up(tablet) {
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    margin-top: 0.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 35 / 32;
+    border-radius: 1.5rem;
+
+    @include mq-up(tablet) {
+      aspect-ratio: 16 / 9;
+    }
+
+    @include mq-up(desktop) {
+      aspect-ratio: 77 / 80;
+      border-radius: 3rem;
+    }
+  }
+}

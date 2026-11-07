@@ -1,0 +1,22 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables";
+
+.cta {
+  &__section-header {
+    --section-header-margin-end: 0;
+    --section-header-max-width: none;
+    --section-header-title-size: var(--fs-h1);
+    --section-header-line-height: #{variables.$h1-line-height};
+    --section-header-pill-width: 3.33em;
+
+    @include mq-up(desktop) {
+      --section-header-line-height: #{variables.$h1-line-height-desktop};
+      --section-header-pill-width: 2.5em;
+    }
+
+    .section-header__text {
+      max-width: 40rem;
+      margin-inline: auto;
+    }
+  }
+}

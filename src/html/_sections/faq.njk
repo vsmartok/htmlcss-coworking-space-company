@@ -1,0 +1,24 @@
+<section class="section faq">
+    <div class="container faq__inner">
+        <div class="section-header faq__section-header">
+            <p class="section-header__subtitle">Frequently Asked Questions</p>
+            <h2 class="section-header__title">Your Roadmap to Coworking Clarity</h2>
+            <p class="section-header__text">Frequently asked questions ordered by popularity. Remember that if the
+                visitor has not committed to the call to action, they may still have questions (doubts) that can be
+                answered.</p>
+        </div>
+
+        <div class="accordion faq__accordion">
+            {% for item in faq %}
+            <details class="accordion__item" name="faq" {% if loop.first %}open{% endif %}>
+                <summary class="accordion__header">
+                    {{ item.question }}
+                </summary>
+                <div class="accordion__body content">
+                    {{ item.answer | safe }}
+                </div>
+            </details>
+            {% endfor %}
+        </div>
+    </div>
+</section>

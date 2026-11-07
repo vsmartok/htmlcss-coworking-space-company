@@ -1,0 +1,69 @@
+.accordion {
+  --accordion-icon: url('data:image/svg+xml,<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_12_115)"><path d="M28 16C28 22.6274 22.6274 28 16 28C9.37258 28 4 22.6274 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="%231D1E1C"/><path d="M11 14L16 19L21 14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="%231D1E1C"/></g><defs><clipPath id="clip0_12_115"><rect width="32" height="32" fill="white"/></clipPath></defs></svg>');
+
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    position: relative;
+    padding-block: 1.25rem;
+
+    &::details-content {
+      block-size: 0;
+      overflow: hidden;
+      transition:
+        block-size var(--transition-duration) ease,
+        content-visibility var(--transition-duration) allow-discrete;
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 8.5rem;
+      border-bottom: 1px solid var(--color-dark);
+    }
+
+    &[open]::details-content {
+      block-size: auto;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+
+    list-style: none;
+    font-weight: 600;
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    &::after {
+      content: "";
+
+      flex-shrink: 0;
+
+      width: 2rem;
+      height: 2rem;
+      background-color: currentcolor;
+      mask: var(--accordion-icon) center / contain no-repeat;
+      transition: transform var(--transition-duration) ease;
+
+      .accordion__item[open] & {
+        transform: rotate(180deg);
+      }
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+  &__body {
+    padding-block-start: 1rem;
+    max-width: 24.375rem;
+  }
+}

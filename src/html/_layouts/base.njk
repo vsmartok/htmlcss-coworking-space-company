@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — {{ site.name }}</title>
+  <meta name="description"
+    content="Cowork is a flexible coworking space with private offices, meeting rooms and 24/7 access. Take a virtual tour and find the plan that fits your team.">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/general-sans/General-Sans-Regular.woff2" as="font" type="font/woff2"
+    crossorigin>
+  <link rel="preload" href="/assets/fonts/neue-regrade/Neue-Regrade-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/styles{% if build.isProd %}.min{% endif %}.css">
+</head>
+
+<body class="page">
+  {% include "_parts/header.njk" %}
+
+  <main class="page__main">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "_parts/footer.njk" %}
+
+  <script src="/assets/js/app{% if build.isProd %}.min{% endif %}.js" defer></script>
+
+  {% block pageScripts %}{% endblock %}
+</body>
+
+</html>

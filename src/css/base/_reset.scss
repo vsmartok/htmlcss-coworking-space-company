@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+dl,
+dd {
+  margin: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+textarea {
+  resize: vertical;
+}
+
+[hidden]:not([hidden="until-found"]) {
+  display: none !important;
+}

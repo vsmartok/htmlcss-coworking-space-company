@@ -1,0 +1,75 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables";
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+
+  font-family: variables.$font-family-base;
+  font-size: variables.$font-size-base;
+  font-weight: variables.$font-weight-base;
+  font-style: variables.$font-style-base;
+  line-height: variables.$line-height-base;
+  font-synthesis: none;
+
+  color: var(--body-color);
+  background-color: var(--body-bg);
+}
+
+a {
+  color: var(--link-color);
+}
+
+p {
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: variables.$headings-font-family;
+  font-style: variables.$headings-font-style;
+  font-weight: variables.$headings-font-weight;
+  line-height: variables.$headings-line-height;
+  color: variables.$headings-color;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: variables.$h1-line-height;
+
+  @include mq-up(desktop) {
+    line-height: variables.$h1-line-height-desktop;
+  }
+}
+
+h2 {
+  font-size: var(--fs-h2);
+
+  @include mq-up(desktop) {
+    line-height: variables.$h2-line-height-desktop;
+  }
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+strong {
+  font-weight: 600;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-color, var(--color-dark));
+  outline-offset: var(--focus-offset, 2px);
+}

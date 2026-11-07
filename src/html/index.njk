@@ -1,0 +1,26 @@
+{% extends "_layouts/base.njk" %}
+
+{% set page = {
+  title: "Home",
+  activeMenu: "home",
+  url: "/"
+} %}
+
+{% block content %}
+{% include "_sections/hero.njk" %}
+{% include "_sections/social-proof.njk" %}
+{% include "_sections/features.njk" %}
+{% include "_sections/virtual-tour.njk" %}
+{% include "_sections/statistics.njk" %}
+{% include "_sections/testimonials.njk" %}
+{% include "_sections/faq.njk" %}
+{% include "_sections/cta.njk" %}
+{% include "_sections/blog.njk" %}
+<dialog class="dialog dialog--video" id="virtual-tour-video" aria-label="Virtual tour video">
+  <div class="dialog__panel">
+    <button class="close dialog__close" type="button" data-dialog-close aria-label="Close video" autofocus>
+    </button>
+    <div class="dialog__video" data-video-slot></div>
+  </div>
+</dialog>
+{% endblock %}

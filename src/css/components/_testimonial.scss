@@ -1,0 +1,53 @@
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  padding: 2rem;
+  line-height: 1.8;
+  background-color: var(--testimonial-bg, var(--color-gray));
+  border-radius: 1.5rem;
+
+  &__avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  &__quote {
+    width: 100%;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  &--lime {
+    --testimonial-bg: var(--color-lime);
+  }
+
+  &--gray {
+    --testimonial-bg: var(--color-gray);
+  }
+
+  &--sky-blue {
+    --testimonial-bg: var(--color-sky-blue);
+  }
+
+  &--pink {
+    --testimonial-bg: var(--color-pink);
+  }
+
+  &--peach {
+    --testimonial-bg: var(--color-peach);
+  }
+}

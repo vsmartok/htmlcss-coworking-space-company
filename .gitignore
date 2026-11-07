@@ -1,0 +1,10 @@
+/node_modules/
+/build/
+/design/
+/.idea/
+.env
+.env.*
+lighthouse*.json
+*.log
+.DS_Store
+Thumbs.db

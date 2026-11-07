@@ -1,0 +1,21 @@
+@use "../abstracts/mixins" as *;
+
+@include font-face(
+  "General Sans",
+  "general-sans/General-Sans-Regular",
+  400,
+  normal
+);
+@include font-face(
+  "General Sans",
+  "general-sans/General-Sans-Semibold",
+  600,
+  normal
+);
+
+@include font-face(
+  "Neue Regrade",
+  "neue-regrade/Neue-Regrade-Bold",
+  700,
+  normal
+);

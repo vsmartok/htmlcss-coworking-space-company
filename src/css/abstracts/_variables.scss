@@ -1,0 +1,84 @@
+// Typography
+$font-family-base: "General Sans", system-ui, sans-serif;
+$font-size-base: 0.875rem;
+$font-weight-base: 400;
+$font-style-base: normal;
+$line-height-base: 1.5;
+
+// Headings
+$headings-font-family: "Neue Regrade", system-ui, sans-serif;
+$headings-font-style: normal;
+$headings-font-weight: 700;
+$headings-line-height: 1.4;
+$headings-color: inherit;
+
+// Initial heading scale
+$h1-font-size: clamp(3rem, 1.886rem + 4.571vw, 6rem); // 48 → 96
+$h2-font-size: clamp(1.5rem, 0.943rem + 2.286vw, 3rem); // 24 → 48
+$h3-font-size: clamp(1rem, 0.814rem + 0.762vw, 1.5rem); // 16 → 24
+$h4-font-size: 1rem;
+$h1-line-height: 1.2;
+$h1-line-height-desktop: 1;
+$h2-line-height-desktop: 1.2;
+
+// Content
+$content-spacing: 1rem;
+$content-heading-spacing: 2rem;
+$content-list-indent: 1.5rem;
+
+$content-border-color: #d8d8d8;
+
+$content-blockquote-padding: 1rem;
+$content-table-cell-padding: 0.75rem;
+
+// Container
+$container-max-width: 90rem;
+$container-padding-x: clamp(1.25rem, 0.229rem + 4.19vw, 4rem); // 20 → 64
+
+// Breakpoints
+$breakpoints: (
+  "tablet": 768px,
+  "desktop": 1024px,
+);
+
+// Button
+$button-min-height: 2.8125rem;
+$button-padding-y: 0.625rem;
+$button-padding-x: 1.5rem;
+
+$button-font-family: $font-family-base;
+$button-font-size: $font-size-base;
+$button-font-weight: 600;
+$button-line-height: $line-height-base;
+
+$button-color: var(--body-color);
+$button-bg: var(--body-bg);
+
+$button-border-width: 1px;
+$button-border-color: transparent;
+$button-border-radius: 2.625rem;
+
+$button-icon-width: 1.5rem;
+
+$button-gap: 0.5rem;
+$button-disabled-opacity: 0.5;
+
+// Header
+$header-min-height: 4.5rem;
+$header-z: 100;
+
+// Hamburger
+$hamburger-width: 3.75rem;
+$hamburger-height: 2.8125rem;
+$hamburger-padding-x: 1.125rem;
+$hamburger-border-radius: 2.625rem;
+
+// Dialog
+$dialog-max-width: 32rem;
+$dialog-padding: 1.5rem;
+$dialog-viewport-padding: 1rem;
+$dialog-backdrop-color: rgb(0 0 0 / 60%);
+
+$dialog-duration: 250; // animation duration in milliseconds
+$dialog-easing: ease;
+$dialog-offset: 1rem;

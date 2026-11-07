@@ -1,0 +1,57 @@
+@use "../abstracts/variables";
+
+.content {
+  :where(ul, ol) {
+    margin-block: 0;
+    padding-inline-start: variables.$content-list-indent;
+  }
+
+  > * + * {
+    margin-block-start: variables.$content-spacing;
+  }
+
+  > :where(h1, h2, h3, h4, h5, h6):not(:first-child) {
+    margin-block-start: variables.$content-heading-spacing;
+  }
+
+  :where(li + li) {
+    margin-block-start: 0.25em;
+  }
+
+  :where(li > ul, li > ol) {
+    margin-block-start: 0.5em;
+  }
+
+  :where(blockquote) {
+    padding-inline-start: variables.$content-blockquote-padding;
+    border-inline-start: 0.25rem solid var(--content-border-color);
+  }
+
+  :where(blockquote > footer) {
+    margin-block-start: 0.5rem;
+  }
+
+  :where(table) {
+    width: 100%;
+  }
+
+  :where(th, td) {
+    padding: variables.$content-table-cell-padding;
+    text-align: start;
+    vertical-align: top;
+    border-block-end: 1px solid var(--content-border-color);
+  }
+
+  :where(caption) {
+    margin-block-end: 0.5rem;
+    text-align: start;
+  }
+
+  > :first-child {
+    margin-block-start: 0;
+  }
+
+  > :last-child {
+    margin-block-end: 0;
+  }
+}

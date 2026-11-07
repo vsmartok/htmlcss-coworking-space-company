@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as *;
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.8;
+
+  &__item {
+    @include mq-up(desktop) {
+      padding-block: 0.5rem;
+    }
+  }
+
+  &__link {
+    color: currentColor;
+    text-decoration: none;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

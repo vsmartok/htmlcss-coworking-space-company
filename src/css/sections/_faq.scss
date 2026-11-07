@@ -1,0 +1,24 @@
+@use "../abstracts/mixins" as *;
+
+.faq {
+  &__inner {
+    display: grid;
+    gap: 1rem 2rem;
+
+    @include mq-up(desktop) {
+      grid-template-columns: minmax(0, 33fr) minmax(0, 47fr);
+    }
+  }
+
+  &__section-header {
+    --section-header-margin-end: 0;
+
+    @include mq-up(desktop) {
+      --section-header-text-align: left;
+
+      .section-header__text {
+        max-width: 24.375rem;
+      }
+    }
+  }
+}

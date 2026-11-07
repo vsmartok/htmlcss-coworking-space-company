@@ -1,0 +1,35 @@
+<header class="header" data-menu-open="false">
+    <div class="container container--wide header__inner">
+
+        <a class="logo header__logo" href="/" aria-label="Cowork — home">
+            <svg class="logo__image" viewBox="0 0 119 24" width="119" height="24" aria-hidden="true" focusable="false">
+                <use href="/assets/icons/sprite.svg#logo"></use>
+            </svg>
+        </a>
+
+        <button class="hamburger header__toggle" type="button" aria-controls="site-menu" aria-expanded="false"
+            aria-label="Menu" data-menu-toggle>
+            <span class="hamburger__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="menu header__menu" id="site-menu" aria-label="Main">
+
+            <div class="menu__inner">
+                <ul class="menu__list">
+                    {% for item in nav.main %}
+                    <li class="menu__item">
+                        <a class="menu__link" href="{{ item.url }}"
+                            {% if page.activeMenu == item.id %}aria-current="page" {% endif %}>{{ item.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="menu__actions">
+                    <a class="button button--secondary" href="/login">Log In</a>
+                    <a class="button button--primary" href="/signup">Sign Up</a>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</header>

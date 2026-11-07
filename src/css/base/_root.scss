@@ -1,0 +1,35 @@
+@use "../abstracts/variables";
+
+:root {
+  color-scheme: light;
+
+  interpolate-size: allow-keywords;
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-dark: #1d1e1c;
+  --color-gray: #f1f1f1;
+  --color-lime: #d3f985;
+  --color-sky-blue: #a6e8f6;
+  --color-pink: #fcbedc;
+  --color-peach: #fbc899;
+
+  --body-color: var(--color-dark);
+  --body-bg: var(--color-white);
+  --link-color: var(--color-dark);
+
+  --fs-h1: #{variables.$h1-font-size};
+  --fs-h2: #{variables.$h2-font-size};
+  --fs-h3: #{variables.$h3-font-size};
+  --fs-h4: #{variables.$h4-font-size};
+
+  --content-border-color: #{variables.$content-border-color};
+
+  --transition-duration: 150ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-duration: 0ms;
+  }
+}

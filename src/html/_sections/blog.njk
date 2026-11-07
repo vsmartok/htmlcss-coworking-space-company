@@ -1,0 +1,37 @@
+<section class="section blog" id="blog">
+    <div class="container">
+        <div class="section-header blog__section-header">
+            <p class="section-header__subtitle">Cowork Chronicles </p>
+            <h2 class="section-header__title">
+                Insights, Innovation, and
+                <img class="section-header__pill" src="/uploads/images/blog-pill.webp" alt=""
+                    srcset="/uploads/images/blog-pill.webp 1x, /uploads/images/blog-pill@2x.webp 2x">
+                Inspiration
+            </h2>
+            <p class="section-header__text">Stay updated on the latest trends in coworking, productivity tips, and
+                success stories that define the Cowork experience.</p>
+        </div>
+        <div class="blog__articles">
+            {% for item in articles %}
+            <article class="blog__article">
+                <img class="blog__image" src="/uploads/images/{{ item.image.x1 }}" srcset="/uploads/images/{{ item.image.x1 }} 416w,
+             /uploads/images/{{ item.image.x2 }} 832w"
+                    sizes="(width >= 1440px) 416px, (width >= 1024px) 33vw, (width >= 768px) 700px, calc(100vw - 2.5rem)"
+                    width="416" height="300" loading="lazy" alt="">
+
+                <div class="blog__content">
+                    <p class="blog__info">
+                        <span class="blog__tag blog__tag--{{ item.tagColor }}">{{ item.tag }}</span>
+                        <span class="blog__time">{{ item.time }} read</span>
+                    </p>
+                    <h3 class="blog__title">{{ item.title }}</h3>
+                </div>
+                <a class="blog__read-more" href="#" aria-label="Read more: {{ item.title }}">Read more</a>
+            </article>
+            {% endfor %}
+        </div>
+        <p class="blog__buttons">
+            <a class="button button--secondary" href="#">View All</a>
+        </p>
+    </div>
+</section>

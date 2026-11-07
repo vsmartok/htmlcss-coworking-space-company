@@ -1,0 +1,52 @@
+[
+  {
+    "color": "lime",
+    "avatar": {
+      "1x": "avatar-liam-brown.webp",
+      "2x": "avatar-liam-brown@2x.webp"
+    },
+    "quote": "The 24/7 access and secure facilities have been incredibly convenient for my team's flexible schedules. We love the coworking space!",
+    "name": "Liam Brown",
+    "position": "Software Engineer, TechStartup Innovations"
+  },
+  {
+    "color": "gray",
+    "avatar": {
+      "1x": "avatar-michael-rodriguez.webp",
+      "2x": "avatar-michael-rodriguez@2x.webp"
+    },
+    "quote": "The aesthetics of Cowork are inspiring. The attention to detail in the design creates an atmosphere that sparks creativity. It's a place where ideas flow effortlessly, and collaboration happens organically.",
+    "name": "Michael Rodriguez",
+    "position": "Creative Director, DesignCraft Studio"
+  },
+  {
+    "color": "sky-blue",
+    "avatar": {
+      "1x": "avatar-michael-thompson.webp",
+      "2x": "avatar-michael-thompson@2x.webp"
+    },
+    "quote": "As a freelance designer, I was getting tired of working from home or coffee shops. The coworking space has provided me with a productive and professional environment to focus on my work.",
+    "name": "Michael Thompson",
+    "position": "Graphic Designer, DesignCo"
+  },
+  {
+    "color": "pink",
+    "avatar": {
+      "1x": "avatar-david-wilson.webp",
+      "2x": "avatar-david-wilson@2x.webp"
+    },
+    "quote": "The coworking space has been a wonderful resource for my team. The open floor plan and dedicated private offices allow us to collaborate and concentrate as needed.",
+    "name": "David Wilson",
+    "position": "Project Manager, SoftwareSolutions LLC"
+  },
+  {
+    "color": "peach",
+    "avatar": {
+      "1x": "avatar-alex-nguyen.webp",
+      "2x": "avatar-alex-nguyen@2x.webp"
+    },
+    "quote": "The flexible membership options and amenities like high-speed internet, printers, and meeting rooms have made this coworking space a perfect fit for my small business.",
+    "name": "Alex Nguyen",
+    "position": "Marketing Consultant, Maverick Marketing"
+  }
+]

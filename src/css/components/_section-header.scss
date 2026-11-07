@@ -1,0 +1,71 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables";
+
+.section-header {
+  --section-header-margin-end: 2.5rem;
+  --section-header-text-align: center;
+
+  max-width: var(--section-header-max-width, 48rem);
+  margin-inline: auto;
+  margin-block-end: var(--section-header-margin-end);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: var(--section-header-text-align);
+
+  &__subtitle {
+    font-family: variables.$font-family-base;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: var(--section-header-title-size, var(--fs-h2));
+    line-height: var(
+      --section-header-line-height,
+      variables.$headings-line-height
+    );
+
+    @include mq-up(desktop) {
+      line-height: var(
+        --section-header-line-height,
+        variables.$h2-line-height-desktop
+      );
+    }
+  }
+
+  &__pill {
+    display: inline-block;
+    border-radius: 4rem;
+    object-fit: cover;
+    vertical-align: bottom;
+    height: 1lh;
+    width: var(--section-header-pill-width, 5em);
+
+    @include mq-up(desktop) {
+      width: var(--section-header-pill-width, 3.75em);
+    }
+  }
+
+  &__text {
+    margin-top: 0.5rem;
+  }
+
+  &__buttons {
+    margin-top: 1.5rem;
+  }
+
+  &--small {
+    --section-header-margin-end: 1.5rem;
+  }
+
+  @include mq-up(desktop) {
+    --section-header-margin-end: 5rem;
+
+    &--small {
+      --section-header-margin-end: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@use "../abstracts/mixins" as *;
+
+.hero {
+  padding-block: 4rem;
+
+  @include mq-up(desktop) {
+    padding-block: 7rem;
+  }
+
+  &__inner {
+    display: grid;
+    gap: 2.5rem 2rem;
+
+    @include mq-up(desktop) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+
+    @include mq-up(desktop) {
+      text-align: left;
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__accent {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  &__swoosh {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 3.8em;
+    color: var(--color-lime);
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+
+  &__text {
+    max-width: 30rem;
+    margin-inline: auto;
+
+    @include mq-up(desktop) {
+      margin-inline: 0;
+    }
+  }
+
+  &__button {
+    margin-top: 1rem;
+    align-self: center;
+
+    @include mq-up(desktop) {
+      align-self: flex-start;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 35 / 32;
+    border-radius: 1.5rem;
+
+    @include mq-up(desktop) {
+      aspect-ratio: 1;
+      border-radius: 3rem;
+    }
+  }
+}

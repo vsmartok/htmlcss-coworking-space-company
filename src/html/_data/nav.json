@@ -1,0 +1,24 @@
+{
+  "main": [
+    {
+      "id": "about",
+      "url": "#about",
+      "title": "About"
+    },
+    {
+      "id": "pricing",
+      "url": "#",
+      "title": "Pricing"
+    },
+    {
+      "id": "blog",
+      "url": "#blog",
+      "title": "Blog"
+    },
+    {
+      "id": "events",
+      "url": "#events",
+      "title": "Events"
+    }
+  ]
+}

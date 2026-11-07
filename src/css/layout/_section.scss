@@ -1,0 +1,19 @@
+@use "../abstracts/mixins" as *;
+
+.section {
+  --section-padding-block: 4rem;
+
+  padding-block: var(--section-padding-block);
+
+  @include mq-up(desktop) {
+    --section-padding-block: 7rem;
+  }
+
+  &--sm {
+    --section-padding-block: 3rem;
+
+    @include mq-up(desktop) {
+      --section-padding-block: 5rem;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "logo-ipsum-1",
+    "name": "Logoipsum",
+    "width": 152,
+    "height": 19
+  },
+  {
+    "id": "logo-ipsum-2",
+    "name": "Logoipsum",
+    "width": 145,
+    "height": 32
+  },
+  {
+    "id": "logo-ipsum-3",
+    "name": "Logoipsum",
+    "width": 138,
+    "height": 32
+  },
+  {
+    "id": "logo-ipsum-4",
+    "name": "Logoipsum",
+    "width": 154,
+    "height": 28
+  },
+  {
+    "id": "logo-ipsum-5",
+    "name": "Logoipsum",
+    "width": 132,
+    "height": 35
+  }
+]

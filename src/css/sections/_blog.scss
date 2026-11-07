@@ -1,0 +1,114 @@
+@use "../abstracts/mixins" as *;
+
+.blog {
+  --blog-read-more-icon: url('data:image/svg+xml,<svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.96028 5.89967C7.17996 6.11934 7.17996 6.47544 6.96028 6.69512L1.22541 12.43C1.00573 12.6496 0.649631 12.6496 0.429956 12.43L0.164756 12.1648C-0.0549187 11.9451 -0.0549187 11.589 0.164756 11.3693L5.23671 6.29739L0.164756 1.22544C-0.0549186 1.00577 -0.0549186 0.649665 0.164756 0.429991L0.429956 0.164791C0.649631 -0.0548839 1.00573 -0.0548839 1.22541 0.164791L6.96028 5.89967Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"/></svg>');
+  &__section-header {
+    .section-header__text {
+      max-width: 32.5rem;
+      margin-inline: auto;
+    }
+  }
+
+  &__articles {
+    display: grid;
+    gap: 2rem;
+
+    @include mq-up(desktop) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 35 / 30;
+    border-radius: 1.5rem;
+
+    @include mq-up(tablet) {
+      aspect-ratio: 16 / 9;
+    }
+
+    @include mq-up(desktop) {
+      aspect-ratio: 104 / 75;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__tag {
+    display: block;
+    padding: 0.25rem 0.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+
+    &--sky-blue {
+      background-color: var(--color-sky-blue);
+    }
+
+    &--pink {
+      background-color: var(--color-pink);
+    }
+
+    &--lime {
+      background-color: var(--color-lime);
+    }
+  }
+
+  &__time {
+  }
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__read-more {
+    margin-block-start: auto;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: color var(--transition-duration) ease;
+
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 0.75rem;
+      height: 0.75rem;
+      background-color: currentcolor;
+      mask: var(--blog-read-more-icon) center / contain no-repeat;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: color-mix(in srgb, currentColor 80%, var(--body-bg));
+      }
+    }
+  }
+
+  &__buttons {
+    margin-block-start: 1.5rem;
+    text-align: center;
+
+    @include mq-up(desktop) {
+      margin-block-start: 4rem;
+    }
+  }
+}
