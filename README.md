@@ -2,7 +2,7 @@
 
 A responsive landing page for a fictional coworking company, hand-coded from a Figma design without a CSS or JS framework.
 
-**Live demo:** coming soon
+**Live demo:** [coworking-space-landing-page-v1.netlify.app](https://coworking-space-landing-page-v1.netlify.app/)
 
 ![Cowork landing page](docs/preview.jpg)
 
@@ -27,9 +27,9 @@ A responsive landing page for a fictional coworking company, hand-coded from a F
 
 | Performance | Accessibility | Best Practices | SEO |
 | :---------: | :-----------: | :------------: | :-: |
-|     96      |      100      |      100       | 100 |
+|     98      |      100      |      100       | 100 |
 
-Mobile preset, production build on a local server without compression or caching.
+Mobile preset, measured on the deployed site.
 
 ## Getting started
 
